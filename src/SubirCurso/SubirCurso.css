@@ -1,0 +1,81 @@
+main * {
+    font-family: poppins;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    background-color: #ffffff;
+}
+
+/*Titulo subir curso*/
+.grupo-2 {
+    text-align: left;
+    margin-left: 25px;
+}
+
+/*Todos los textos*/
+h4 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/*Sección derecha*/
+.box-3 {
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: right;
+    margin-top:15px;
+}
+
+.cuadrado {/*cuadrado arriba de miniatura*/
+        width: 200px; 
+        height: 150px;
+        background-color: #ccc; 
+        position: flex;
+        top: 0;
+        margin-bottom: 10px;
+}
+
+  /* Media query para dispositivos móviles */
+@media (max-width: 576px) {
+    .grupo-1 {
+        grid-template-columns: repeat(1, 1fr); /* Cambia a una sola columna */
+        padding: 30px; /* Reduce el padding */
+    }
+
+    #dropZ {
+        margin-top: 30px; /* Ajusta el margen superior */
+    }
+
+    .custom-icon {
+        font-size: 60px; /* Reduce el tamaño del ícono */
+    }
+
+    .box {
+        text-align: center; /* Centra el contenido en dispositivos móviles */
+    }
+
+    .box figure {
+        margin-left: 0; /* Elimina el margen izquierdo */
+    }
+
+    .box-3 {
+        margin-top: 30px; /* Ajusta el margen superior */
+    }
+
+    .cuadrado {
+        width: 100%; /* Ajusta el ancho al 100% */
+        height: auto; /* Ajusta la altura automáticamente */
+        margin-bottom: 20px; /* Ajusta el margen inferior */
+    }
+
+    .selectFile label {
+        margin-bottom: 10px; /* Reduce el margen inferior */
+    }
+}

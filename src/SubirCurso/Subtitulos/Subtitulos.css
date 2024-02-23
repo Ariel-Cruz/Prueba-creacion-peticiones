@@ -1,0 +1,19 @@
+  /*botones de seleccionar archivo*/
+  .selectFile label {
+    display: block; 
+    background-color: #60BDB1; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-align: center; 
+  }
+  
+  .selectFile input[type="file"] {
+    display: none; /* Ocultar el input de tipo file */
+  }
+
+  .selectFile {
+    margin-bottom: 20px; 
+  }
+  
