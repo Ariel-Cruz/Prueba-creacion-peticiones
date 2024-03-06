@@ -1,0 +1,183 @@
+/* Estilos formulario */
+
+/* Contenedor Principal */
+.mc-container {
+    display: grid;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Titulo N° 1 */
+.tituloFormularioSubida {
+    color: hsl(172, 41%, 56%);
+    font-family: poppins;
+    text-align: left;
+    margin-top: 3%;
+    margin-left: 2%;
+}
+
+/* Contenedor Formulario */
+.contenedorFormulario {
+    margin-top: -100px;
+    margin-bottom: 50px;
+    width: 90vw;
+    background-color: rgb(222, 219, 219);
+    border-radius: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.75);
+}
+
+/* Descripción */
+.descripcionFormulario {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+
+    margin-left: 5%;
+}
+
+.textoFormulario {
+    margin-bottom: 20px;
+    font-family: poppins;
+} 
+
+.tablaFormulario {
+    margin-right: 200px;
+    margin-top: -100px;
+}
+
+.buttonFormulario {
+    background-color: hsl(172, 41%, 56%);
+    width: 280px;
+    text-align: left;
+    color: #ffff;
+    font-family: poppins;
+    border-radius: 10px;
+    margin-right: 50px;
+}
+
+.buttonFormulario p {
+    color: #ffff;
+    font-family: poppins;
+}
+
+.buttonFormulario:hover {
+    background-color: #F59F30;
+}
+
+.selectButtonFormulario {
+    background-color: hsl(172, 41%, 56%);
+    width: 280px;
+    height: 40px;
+    text-align: left;
+    color: #ffff;
+    font-family: poppins;
+    border-radius: 10px;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.selectButtonFormulario:hover {
+    background-color: #F59F30;
+}
+
+.labelFormulario {
+    background-color: #ffff;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-top: 15px;
+    width: 250px;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-family: poppins;
+}
+
+/* Contenedor Modificar Cambios */
+.PrevisualizacionFormulario { 
+    flex-direction: column;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.buttonSubir,
+.buttonEliminar {
+    width: 20%;
+    height: 5%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    border-radius: 10px;
+    color: #ffff;
+    font-family: poppins;
+    transition: 150ms ease-out;
+}
+
+.buttonSubir:hover,
+.buttonEliminar:hover {
+    transition: 150ms ease-in;
+}
+
+.buttonSubir {
+    background-color: hsl(172, 41%, 56%);
+    margin-top: 1%;
+}
+
+.buttonSubir:hover {
+    background-color: #C8D300;
+    transform: scale(1.1);
+}
+
+.buttonEliminar {
+    background-color: rgb(255, 98, 0);
+    margin-top: 3%;
+}
+
+.buttonEliminar:hover {
+    background-color: #af0e02;
+    transform: scale(1.1);
+}
+
+/* CSS para Miniatura */
+.contenedorImagen {
+    width: 160px;
+    height: 160px;
+    margin-top: 5%;
+    border: 3px solid #60BDB1;
+    background-color: rgb(232, 230, 230);
+}  
+
+/* Estilos para Cursos Disponibles */
+.cursosDisponibles {
+    overflow-x: auto; /* Permitir el desplazamiento horizontal */
+    white-space: nowrap; /* No permitir que las cards se envuelvan a la siguiente línea */
+}
+
+.cardsContainer {
+    display: flex;
+    flex-wrap: nowrap; /* Impedir que las tarjetas se envuelvan a la siguiente línea */
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+    width: calc(33.33% - 20px); /* Ancho calculado para tres tarjetas por fila */
+    min-width: 250px; /* Ancho mínimo de la tarjeta */
+    overflow: hidden; /* Ocultar el texto que exceda el tamaño de la tarjeta */
+    text-overflow: ellipsis; /* Mostrar puntos suspensivos cuando el texto se trunque */
+}
+

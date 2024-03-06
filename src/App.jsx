@@ -7,8 +7,11 @@ import { CursosProvider } from './context/cursosContext.jsx'
 import FetchCursos from './SubirCurso/FetchCursos.jsx'
 import FormularioFetch from './SubirCurso/FormularioFetch.jsx'
 import FetchRutas from './SubirCurso/FetchRutas.jsx'
-import AsignarCursoFetch from './SubirCurso/AsignarCursoFetch.jsx'
-import AsignarCursos2 from './SubirCurso/AsignarCursos2.jsx'
+import ModificarRuta from './SubirCurso/ModificarRuta.jsx'
+import SubirRuta from './SubirCurso/SubirRuta.jsx'
+import Registro from './InicioSesion/Registro.jsx'
+import PerfilUsuario from './InicioSesion/PerfilUsuario.jsx'
+import InicioSesion from './InicioSesion/InicioSesion.jsx'
 
 function App() {
   return (
@@ -17,12 +20,16 @@ function App() {
       <div className='px-10 container m-auto'>
         <CursosProvider>
           <Routes>
+            <Route path="/registro" element={<Registro />} />
+            <Route path="/perfil" element={<PerfilUsuario />} />
+            <Route path="/inicio-sesion" element={<InicioSesion />} />
+
               <Route path="/" element={<FetchRutas />} />
-              <Route path="/asignar-curso" element={<AsignarCursoFetch />} />
               <Route path="subir-curso" element={<FormularioFetch />}/>
               <Route path="/cursos" element={<FetchCursos />} />
               <Route path="/rutas" element={<FetchRutas />} />
-              <Route path="/asignar" element={<AsignarCursos2 />} />
+              <Route path="/modificar" element={<ModificarRuta />} />
+              <Route path="/subir-ruta" element={<SubirRuta />}/>
           </Routes>
         </CursosProvider>
       </div>    

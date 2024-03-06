@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import AsignarCursoFetch from './AsignarCursoFetch.jsx';
+
 function FetchRutas() {
   const [rutas, setRutas] = useState([]);
 
@@ -23,28 +23,32 @@ function FetchRutas() {
       <h1>Rutas de Aprendizaje</h1>
       <div className='row'>
         {rutas.map((ruta) => (
-          <div key={ruta._id} className='col mb-4'>
-            <div className='card'>
+          <div key={ruta._id} className='col-12'>
+            <div className='card mb-4' style={{width: '100%', height: 'auto'}}>
                 <div className='card-body'>
                   <h5 className='card-title'>{ruta.nombreRuta}</h5>
-                  <div>
+                  <p className='card-text'>{ruta.descripcion}</p>
+                  <div className="d-flex flex-wrap ">
+
                     {ruta.curso.map((cursosRuta) => (
-                      <div key={cursosRuta._id}>
-                        <div className='card'>
-                          <img src={cursosRuta.imagen?.url} alt={cursosRuta.nombreCurso} className='card-img-top' />
+                      <div key={cursosRuta._id} className="p-2" style={{flex: '0 0 30%'}}>
+                        <div className='card' style={{width: '100%'}}>
+                          <img src={cursosRuta.imagen?.url} alt={cursosRuta.nombreCurso} className='card-img-top' style={{width: '100%', height: '200px', objectFit: 'cover'}} />
                           <div className='card-body'>
                             <h5 className='card-title'>{cursosRuta.nombreCurso}</h5>
                           </div>
                         </div>
                       </div>
                     ))}
+                    
+                    <Link to={`/modificar`} ><button className='btn btn-primary'>Modificar Ruta</button></Link>
                   </div>
                 </div>
             </div>
-            <Link to={`/asignar`}><button>Asignar Curso a la Ruta</button></Link>
           </div>
         ))}
       </div>
+      <Link to="/subir-ruta"><button >Crear Ruta Nueva</button> </Link>
     </div>
   );
 }

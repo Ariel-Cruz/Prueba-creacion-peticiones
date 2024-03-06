@@ -3,7 +3,7 @@ import axios from 'axios'; // Importa axios para realizar la solicitud POST
 
 const CursoForm = () => {
   const [nombreCurso, setNombreCurso] = useState('');
-  const [categoria, setCategoria] = useState('');
+  const [filtro, setFiltro] = useState('');
   const [profesor, setProfesor] = useState('');
   const [duracion, setDuracion] = useState('');
 
@@ -12,7 +12,7 @@ const CursoForm = () => {
 
     const cursoData = {
       nombreCurso: nombreCurso,
-      categoria: categoria,
+      filtro: filtro,
       profesor: profesor,
       duracion: duracion
     };
@@ -23,7 +23,7 @@ const CursoForm = () => {
         console.log('Curso creado:', response.data);
         // Limpiar los campos del formulario después de enviar el curso
         setNombreCurso('');
-        setCategoria('');
+        setFiltro('');
         setProfesor('');
         setDuracion('');
       })
@@ -45,7 +45,7 @@ const CursoForm = () => {
         <div>
           <label>
             Categoría:
-            <input type="text" value={categoria} onChange={(e) => setCategoria(e.target.value)} />
+            <input type="text" value={filtro} onChange={(e) => setFiltro(e.target.value)} />
           </label>
         </div>
         <div>
@@ -57,7 +57,7 @@ const CursoForm = () => {
         <div>
           <label>
             Duración:
-            <input type="text" value={duracion} onChange={(e) => setDuracion(e.target.value)} />
+            <input type="number" value={duracion} onChange={(e) => setDuracion(e.target.value)} />
           </label>
         </div>
         <button type="submit">Enviar</button>
